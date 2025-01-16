@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c82xi1jjwsc2y"]
+
+[ext_resource type="PackedScene" uid="uid://bujl8uit07wwt" path="res://PetMethods/Cats/method_cat.tscn" id="1_7ax3a"]
+[ext_resource type="Script" path="res://PetMethods/Cats/method_smokey.gd" id="2_qbtus"]
+
+[node name="MethodKora" instance=ExtResource("1_7ax3a")]
+script = ExtResource("2_qbtus")
+
+[node name="nameTag" parent="." index="3"]
+text = "Kora"

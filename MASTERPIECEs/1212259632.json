@@ -1,0 +1,98 @@
+{
+    "use_id": "foto_stuff",
+    "use_utc": "1212259632",
+    "color_list": [
+        [
+            135,
+            206,
+            235
+        ],
+        [
+            112,
+            147,
+            219
+        ],
+        [
+            159,
+            95,
+            159
+        ],
+        [
+            112,
+            147,
+            219
+        ],
+        [
+            190,
+            190,
+            190
+        ],
+        [
+            199,
+            21,
+            133
+        ],
+        [
+            159,
+            95,
+            159
+        ],
+        [
+            123,
+            104,
+            238
+        ],
+        [
+            135,
+            206,
+            235
+        ],
+        [
+            135,
+            206,
+            235
+        ]
+    ],
+    "number_list": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        5,
+        6,
+        9
+    ],
+    "artributes": [
+        "Random",
+        "Door",
+        "Cloud",
+        "Fire",
+        "Dog",
+        "Rock",
+        "Pen"
+    ],
+    "foto": {
+        "IMG": "/assets/Fotoes/OG/landscape58.jpg",
+        "IMG2": "/assets/Fotoes/OG/landscape41.jpg",
+        "AB": 50,
+        "HSB": [
+            180,
+            50,
+            50
+        ],
+        "RGB": [
+            127,
+            127,
+            127
+        ],
+        "Filters": [
+            "Blur",
+            "Detail",
+            "Edge Enhance"
+        ]
+    },
+    "file_path": "foto_stuff/foto.png"
+}

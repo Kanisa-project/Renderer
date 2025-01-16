@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://8vuavb4b1ljf"]
+
+[ext_resource type="PackedScene" uid="uid://bujl8uit07wwt" path="res://PetMethods/Cats/method_cat.tscn" id="1_ilycm"]
+[ext_resource type="Script" path="res://PetMethods/Cats/method_tucker.gd" id="2_hl2gp"]
+
+[node name="MethodTucker" instance=ExtResource("1_ilycm")]
+script = ExtResource("2_hl2gp")
+
+[node name="nameTag" parent="." index="3"]
+text = "Tucker"

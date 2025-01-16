@@ -1,0 +1,145 @@
+[gd_scene load_steps=30 format=3 uid="uid://clw3hk1dfsk1l"]
+
+[ext_resource type="Shader" path="res://shader_tut/texture_code.gdshader" id="1_lp5dg"]
+[ext_resource type="Texture2D" uid="uid://hdsl0n1blacn" path="res://icon.svg" id="2_0ot2r"]
+[ext_resource type="Texture2D" uid="uid://dkv2xs0i10c5e" path="res://shader_tut/checkered.png" id="2_6msr0"]
+[ext_resource type="Texture2D" uid="uid://dmpcr1nicwxda" path="res://shader_tut/striped.png" id="2_uun8t"]
+[ext_resource type="Texture2D" uid="uid://mwbpb7e04nwy" path="res://shader_tut/striped_h.png" id="3_mpj0c"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code2.gdshader" id="4_m1w4n"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code3.gdshader" id="5_gp0ce"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code4.gdshader" id="7_qgwfw"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code5.gdshader" id="8_i03f2"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code6.gdshader" id="10_t4n3e"]
+[ext_resource type="Script" path="res://shader_tut/icon_6.gd" id="11_0e5y0"]
+[ext_resource type="Texture2D" uid="uid://c2ewhpielegr7" path="res://shader_tut/circle_128.png" id="11_int4p"]
+[ext_resource type="Texture2D" uid="uid://cpid2x27wvrrt" path="res://shader_tut/circle_32.png" id="12_1asni"]
+
+[sub_resource type="Gradient" id="Gradient_lqsdm"]
+colors = PackedColorArray(0, 0.543716, 0, 1, 1, 0.121569, 0.670588, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ssts0"]
+gradient = SubResource("Gradient_lqsdm")
+width = 128
+height = 128
+fill = 2
+fill_from = Vector2(0.266187, 0.298561)
+fill_to = Vector2(0.687075, 0.622449)
+repeat = 2
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jqqn2"]
+seed = 420
+frequency = 0.069
+fractal_weighted_strength = 1.0
+cellular_jitter = 2.2
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5df3l"]
+noise = SubResource("FastNoiseLite_jqqn2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b84v5"]
+shader = ExtResource("1_lp5dg")
+shader_parameter/gradient_size = 0.426
+shader_parameter/mask_texture = ExtResource("2_uun8t")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_5df3l")
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_ssts0")
+
+[sub_resource type="Gradient" id="Gradient_o3muv"]
+offsets = PackedFloat32Array(0, 0.272727, 0.727273)
+colors = PackedColorArray(0, 0.580392, 0, 1, 0.494118, 0.156863, 1, 1, 0.494118, 0.156863, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oq14n"]
+gradient = SubResource("Gradient_o3muv")
+width = 128
+height = 128
+fill = 2
+fill_from = Vector2(0.25, 0.667)
+fill_to = Vector2(0.5, 0.667)
+repeat = 2
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_opf2c"]
+fractal_octaves = 9
+fractal_lacunarity = 4.0
+fractal_weighted_strength = 0.8
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j24y0"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_opf2c")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u486a"]
+shader = ExtResource("4_m1w4n")
+shader_parameter/alpha = 0.805
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_oq14n")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_j24y0")
+shader_parameter/mask_texture = ExtResource("2_6msr0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_co65y"]
+shader = ExtResource("5_gp0ce")
+shader_parameter/x_speed = 0.3
+shader_parameter/y_speed = 1.0
+shader_parameter/red = 0.5
+shader_parameter/green = 0.0
+shader_parameter/blue = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1o2w"]
+shader = ExtResource("7_qgwfw")
+shader_parameter/slider_progress = 0.6
+shader_parameter/circle_size = 0.5
+
+[sub_resource type="Gradient" id="Gradient_a0sna"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 0, 0, 1, 0, 0.584314, 0.0313726, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3hsga"]
+gradient = SubResource("Gradient_a0sna")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.52, 0.52)
+repeat = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l56dw"]
+shader = ExtResource("8_i03f2")
+shader_parameter/alpha_gradient = 0.5
+shader_parameter/edge = 0.5
+shader_parameter/gradient_texture = SubResource("GradientTexture2D_3hsga")
+shader_parameter/mask_texture = ExtResource("3_mpj0c")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3x3j"]
+shader = ExtResource("10_t4n3e")
+shader_parameter/mask_texture = ExtResource("11_int4p")
+
+[node name="Texture" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_b84v5")
+position = Vector2(254, 135)
+texture = ExtResource("3_mpj0c")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_u486a")
+position = Vector2(498, 126)
+texture = ExtResource("2_uun8t")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_co65y")
+position = Vector2(770, 143)
+texture = ExtResource("2_0ot2r")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_e1o2w")
+position = Vector2(247, 403)
+texture = ExtResource("2_0ot2r")
+
+[node name="Icon5" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_l56dw")
+position = Vector2(484, 408)
+texture = ExtResource("2_uun8t")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q3x3j")
+position = Vector2(806, 403)
+texture = ExtResource("2_0ot2r")
+centered = false
+script = ExtResource("11_0e5y0")
+chip_texture = ExtResource("12_1asni")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qk1fm71utxsv"]
+
+[ext_resource type="Script" path="res://PetMethods/Dogs/blue_method.gd" id="1_uc53n"]
+
+[node name="BlueMethod" type="Node2D"]
+script = ExtResource("1_uc53n")

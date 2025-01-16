@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx26vlbg2jpjc"]
+
+[ext_resource type="Script" path="res://PetMethods/PetOwners/pet_owner.gd" id="1_fguj5"]
+[ext_resource type="Texture2D" uid="uid://cpid2x27wvrrt" path="res://shader_tut/circle_32.png" id="2_pk2co"]
+
+[node name="PetOwner" type="CharacterBody2D"]
+script = ExtResource("1_fguj5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-14, -14, -19, 0, -14, 14, 0, 19, 14, 14, 19, 0, 14, -14, 0, -19)
+
+[node name="Spirite" type="Sprite2D" parent="."]
+scale = Vector2(1.10863, 1.10119)
+texture = ExtResource("2_pk2co")
+
+[node name="layerOne" type="TextureRect" parent="Spirite"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="layerTwo" type="TextureRect" parent="Spirite"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="layerThree" type="TextureRect" parent="Spirite"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="layerFour" type="TextureRect" parent="Spirite"]
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="NameTag" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Owen"

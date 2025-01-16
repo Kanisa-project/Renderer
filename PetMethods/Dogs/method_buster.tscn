@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqmbgc3ypox7i"]
+
+[ext_resource type="PackedScene" uid="uid://dqfu5dp3ufacy" path="res://PetMethods/Dogs/method_dog.tscn" id="1_b1v35"]
+[ext_resource type="Script" path="res://PetMethods/Dogs/method_buster.gd" id="2_0ibp0"]
+
+[node name="MethodBuster" instance=ExtResource("1_b1v35")]
+script = ExtResource("2_0ibp0")
+
+[node name="nameTag" parent="." index="3"]
+text = "Buster"

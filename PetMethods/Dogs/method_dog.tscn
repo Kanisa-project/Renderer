@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqfu5dp3ufacy"]
+
+[ext_resource type="PackedScene" uid="uid://cqmxlc8cdp5be" path="res://PetMethods/rock_method.tscn" id="1_4y728"]
+[ext_resource type="Script" path="res://PetMethods/Dogs/method_dog.gd" id="2_7ge16"]
+
+[node name="MethodDog" instance=ExtResource("1_4y728")]
+script = ExtResource("2_7ge16")

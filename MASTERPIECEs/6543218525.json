@@ -1,0 +1,143 @@
+{
+	"use_id": "this_glyph",
+	"use_utc": "6543218525",
+	"color_list": [
+		[
+			159,
+			95,
+			159
+		],
+		[
+			176,
+			224,
+			230
+		],
+		[
+			36,
+			24,
+			130
+		],
+		[
+			199,
+			21,
+			133
+		],
+		[
+			190,
+			190,
+			190
+		],
+		[
+			133,
+			99,
+			99
+		],
+		[
+			139,
+			69,
+			19
+		],
+		[
+			240,
+			230,
+			140
+		],
+		[
+			92,
+			64,
+			51
+		],
+		[
+			176,
+			224,
+			230
+		]
+	],
+	"number_list": [
+		1,
+		2,
+		2,
+		3,
+		4,
+		5,
+		5,
+		5,
+		6,
+		8
+	],
+	"artributes": [
+		"Random",
+		"Window",
+		"Cloud",
+		"Fire",
+		"Dog",
+		"Rock",
+		"Crayon"
+	],
+	"spirite": {
+		"Asteroid": {
+			"core": [
+				10,
+				"ASTROID"
+			],
+			"metal": [
+				10
+			],
+			"rock": [
+				10
+			],
+			"shell": [
+				10
+			]
+		}
+	},
+	"recipe": {
+		"recipe_info": [
+			"Junior",
+			"BBQ Seasoning"
+		],
+		"ingredients": {
+			"Brown Sugar": [
+				"1cup"
+			],
+			"Paprika": [
+				"1T"
+			],
+			"Cayenne": [
+				"1tsp"
+			],
+			"Chili Powder": [
+				"1T"
+			],
+			"Mustard Powder": [
+				"1T"
+			],
+			"Onion Powder": [
+				"1T"
+			],
+			"Garlic Powder": [
+				"1T"
+			],
+			"Salt": [
+				"\u269d"
+			],
+			"Pepper": [
+				"\u269d"
+			],
+			"Parsley": [
+				"1T",
+				"dry"
+			],
+			"Oregano": [
+				"1T",
+				"dry"
+			]
+		},
+		"directions": {
+			"Step 1": "Mix it all together.",
+			"Step 2": "Sprinkle and not rub it onto the meat.",
+			"Step 3": "Cook the meat."
+		}
+	},
+	"file_path": "this_glyph/spirite_recipe.png"
+}

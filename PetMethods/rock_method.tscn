@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqmxlc8cdp5be"]
+
+[ext_resource type="Script" path="res://PetMethods/rock_method.gd" id="1_7mton"]
+
+[node name="RockMethod" type="Node2D"]
+script = ExtResource("1_7mton")
+
+[node name="tirednessBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 18.0
+offset_right = 51.0
+offset_bottom = 26.0
+grow_horizontal = 2
+value = 42.0
+show_percentage = false
+
+[node name="bladderBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 26.0
+offset_right = 51.0
+offset_bottom = 34.0
+grow_horizontal = 2
+value = 33.0
+show_percentage = false
+
+[node name="tummyBar" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 34.0
+offset_right = 51.0
+offset_bottom = 42.0
+grow_horizontal = 2
+value = 66.0
+show_percentage = false
+
+[node name="nameTag" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.5
+offset_top = -23.0
+offset_right = 23.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Rocko"

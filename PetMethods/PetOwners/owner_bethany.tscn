@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ikmbittdy6nr"]
+
+[ext_resource type="PackedScene" uid="uid://bx26vlbg2jpjc" path="res://PetMethods/PetOwners/pet_owner.tscn" id="1_xryvc"]
+[ext_resource type="Script" path="res://PetMethods/PetOwners/owner_bethany.gd" id="2_vsthl"]
+[ext_resource type="PackedScene" uid="uid://c82xi1jjwsc2y" path="res://PetMethods/Cats/method_smokey.tscn" id="3_qhdxg"]
+[ext_resource type="PackedScene" uid="uid://co1spaxc2bu0w" path="res://PetMethods/Dogs/method_beamy.tscn" id="4_kq2gc"]
+
+[node name="OwnerBethany" instance=ExtResource("1_xryvc")]
+script = ExtResource("2_vsthl")
+
+[node name="NameTag" parent="." index="2"]
+text = "Bethany"
+
+[node name="MethodSmokey" parent="." index="3" instance=ExtResource("3_qhdxg")]
+
+[node name="MethodBeamy" parent="." index="4" instance=ExtResource("4_kq2gc")]
+visible = false

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b21jbisamif5f"]
+
+[ext_resource type="PackedScene" uid="uid://bx26vlbg2jpjc" path="res://PetMethods/PetOwners/pet_owner.tscn" id="1_j7koa"]
+[ext_resource type="Script" path="res://PetMethods/PetOwners/owner_jacob.gd" id="2_p0clh"]
+[ext_resource type="PackedScene" uid="uid://cqmbgc3ypox7i" path="res://PetMethods/Dogs/method_buster.tscn" id="3_scyfr"]
+
+[node name="OwnerJacob" instance=ExtResource("1_j7koa")]
+script = ExtResource("2_p0clh")
+
+[node name="NameTag" parent="." index="2"]
+text = "Jacob"
+
+[node name="MethodBuster" parent="." index="3" instance=ExtResource("3_scyfr")]

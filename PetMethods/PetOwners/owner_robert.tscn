@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b74brt7e2ljgq"]
+
+[ext_resource type="PackedScene" uid="uid://bx26vlbg2jpjc" path="res://PetMethods/PetOwners/pet_owner.tscn" id="1_mv4dc"]
+[ext_resource type="Script" path="res://PetMethods/PetOwners/owner_robert.gd" id="2_cr5tt"]
+
+[node name="OwnerRobert" instance=ExtResource("1_mv4dc")]
+script = ExtResource("2_cr5tt")

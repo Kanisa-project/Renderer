@@ -1,0 +1,114 @@
+{
+	"use_id": "foreplay",
+	"use_utc": "1192740901",
+	"color_list": [
+		[
+			135,
+			206,
+			235
+		],
+		[
+			112,
+			147,
+			219
+		],
+		[
+			34,
+			139,
+			34
+		],
+		[
+			0,
+			191,
+			255
+		],
+		[
+			92,
+			64,
+			51
+		],
+		[
+			139,
+			69,
+			19
+		],
+		[
+			176,
+			48,
+			96
+		],
+		[
+			240,
+			230,
+			140
+		]
+	],
+	"number_list": [
+		0,
+		0,
+		1,
+		1,
+		1,
+		2,
+		4,
+		7,
+		9,
+		9
+	],
+	"artributes": [
+		"Random",
+		"Door",
+		"Rainbow",
+		"Ice",
+		"Dog",
+		"Rock",
+		"Crayon"
+	],
+	"glyth": [
+		"Confetti",
+		"Ripples"
+	],
+	"spirite": {
+		"Sword": {
+			"handle": [
+				10
+			],
+			"hilt": [
+				10
+			],
+			"blade": [
+				10
+			],
+			"charm": [
+				10
+			]
+		}
+	},
+	"recipe": {
+		"recipe_info": [
+			"Nana",
+			"Chocolate Eclairs",
+			"dessert"
+		],
+		"ingredients": {
+			"Graham Crackers": [
+				"2.5 pkg"
+			],
+			"Banana pudding": [
+				"1 box"
+			],
+			"Vanilla pudding": [
+				"1 box"
+			],
+			"Chocolate topping": [
+				"2c"
+			]
+		},
+		"directions": {
+			"Step 1": "Graham crackers and mixed puddings in a lasagna style.",
+			"Step 2": "Graham crackers on top and then chocolate sauce on top of that.",
+			"Step 3": "Let set over night."
+		}
+	},
+	"file_path": "foreplay/glyth_spirite_recipe.png"
+}

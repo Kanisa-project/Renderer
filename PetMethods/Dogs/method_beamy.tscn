@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://co1spaxc2bu0w"]
+
+[ext_resource type="PackedScene" uid="uid://dqfu5dp3ufacy" path="res://PetMethods/Dogs/method_dog.tscn" id="1_dhiao"]
+[ext_resource type="Script" path="res://PetMethods/Dogs/method_beamy.gd" id="2_am3rp"]
+
+[node name="MethodBeamy" instance=ExtResource("1_dhiao")]
+script = ExtResource("2_am3rp")
+
+[node name="nameTag" parent="." index="3"]
+text = "Beamy"

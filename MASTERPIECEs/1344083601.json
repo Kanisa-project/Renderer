@@ -1,0 +1,88 @@
+{
+	"use_id": "this_glyph",
+	"use_utc": "1344083601",
+	"color_list": [
+		[
+			159,
+			95,
+			159
+		],
+		[
+			176,
+			224,
+			230
+		],
+		[
+			36,
+			24,
+			130
+		],
+		[
+			199,
+			21,
+			133
+		],
+		[
+			190,
+			190,
+			190
+		],
+		[
+			133,
+			99,
+			99
+		],
+		[
+			139,
+			69,
+			19
+		],
+		[
+			240,
+			230,
+			140
+		],
+		[
+			92,
+			64,
+			51
+		],
+		[
+			176,
+			224,
+			230
+		]
+	],
+	"number_list": [
+		0,
+		0,
+		1,
+		1,
+		3,
+		3,
+		4,
+		4,
+		6,
+		8
+	],
+	"artributes": [
+		"Random",
+		"Window",
+		"Cloud",
+		"Fire",
+		"Dog",
+		"Rock",
+		"Crayon"
+	],
+	"glyph": [
+		"Square",
+		"SlantDown",
+		"Snow"
+	],
+	"file_path": "this_glyph/glyph_glyth.png",
+	"glyth": [
+		"Squiggles",
+		"Slanters",
+		"Pikupstix"
+	]
+}

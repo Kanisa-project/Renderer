@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgcd4n22y5da1"]
+
+[ext_resource type="PackedScene" uid="uid://bx26vlbg2jpjc" path="res://PetMethods/PetOwners/pet_owner.tscn" id="1_275pt"]
+[ext_resource type="Script" path="res://PetMethods/PetOwners/owner_susan.gd" id="2_aifkd"]
+[ext_resource type="PackedScene" uid="uid://8vuavb4b1ljf" path="res://PetMethods/Cats/method_tucker.tscn" id="3_ev5ip"]
+
+[node name="OwnerSusan" instance=ExtResource("1_275pt")]
+script = ExtResource("2_aifkd")
+
+[node name="NameTag" parent="." index="2"]
+text = "Susan"
+
+[node name="MethodTucker" parent="." index="3" instance=ExtResource("3_ev5ip")]
