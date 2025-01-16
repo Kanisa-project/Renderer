@@ -1,0 +1,106 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg3t6fm1r4sri"]
+
+[ext_resource type="PackedScene" uid="uid://s7adfu06v7f" path="res://UI/scenes/tab_bar_artyle.tscn" id="1_lbh7f"]
+[ext_resource type="Script" path="res://UI/scripts/tab_bar_foto.gd" id="2_km7c8"]
+
+[node name="TabBarFoto" instance=ExtResource("1_lbh7f")]
+script = ExtResource("2_km7c8")
+
+[node name="OptionsGrid" parent="." index="0"]
+columns = 6
+
+[node name="FotoOptions" type="GridContainer" parent="." index="1"]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 137.0
+columns = 2
+
+[node name="hsbVbox" type="VBoxContainer" parent="FotoOptions" index="0"]
+layout_mode = 2
+
+[node name="HLbl" type="Label" parent="FotoOptions/hsbVbox" index="0"]
+layout_mode = 2
+text = "Hue:"
+
+[node name="HSldr" type="HSlider" parent="FotoOptions/hsbVbox" index="1"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="SLbl" type="Label" parent="FotoOptions/hsbVbox" index="2"]
+layout_mode = 2
+text = "Saturation:"
+
+[node name="SSldr" type="HSlider" parent="FotoOptions/hsbVbox" index="3"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="BLbl" type="Label" parent="FotoOptions/hsbVbox" index="4"]
+layout_mode = 2
+text = "Brightness:"
+
+[node name="BSldr" type="HSlider" parent="FotoOptions/hsbVbox" index="5"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="rgbVbox" type="VBoxContainer" parent="FotoOptions" index="1"]
+layout_mode = 2
+
+[node name="RLbl" type="Label" parent="FotoOptions/rgbVbox" index="0"]
+layout_mode = 2
+text = "Red:
+"
+
+[node name="RSldr" type="HSlider" parent="FotoOptions/rgbVbox" index="1"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="GLbl" type="Label" parent="FotoOptions/rgbVbox" index="2"]
+layout_mode = 2
+text = "Green:"
+
+[node name="GSldr" type="HSlider" parent="FotoOptions/rgbVbox" index="3"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="ULbl" type="Label" parent="FotoOptions/rgbVbox" index="4"]
+layout_mode = 2
+text = "Blue:"
+
+[node name="USldr" type="HSlider" parent="FotoOptions/rgbVbox" index="5"]
+custom_minimum_size = Vector2(142, 0)
+layout_mode = 2
+
+[node name="CycleBtns" type="HBoxContainer" parent="FotoOptions" index="2"]
+layout_mode = 2
+size_flags_vertical = 6
+alignment = 1
+
+[node name="PrevFotoBtn" type="Button" parent="FotoOptions/CycleBtns" index="0"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "<<"
+
+[node name="NextFotoBtn" type="Button" parent="FotoOptions/CycleBtns" index="1"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = ">>"
+
+[node name="AlphaBlendVBox" type="VBoxContainer" parent="FotoOptions" index="3"]
+layout_mode = 2
+
+[node name="ABLbl" type="Label" parent="FotoOptions/AlphaBlendVBox" index="0"]
+layout_mode = 2
+text = "Alpha Blend:"
+
+[node name="ABSldr" type="HSlider" parent="FotoOptions/AlphaBlendVBox" index="1"]
+layout_mode = 2
+
+[connection signal="drag_ended" from="FotoOptions/hsbVbox/HSldr" to="." method="_on_h_sldr_drag_ended"]
+[connection signal="drag_ended" from="FotoOptions/hsbVbox/SSldr" to="." method="_on_s_sldr_drag_ended"]
+[connection signal="drag_ended" from="FotoOptions/hsbVbox/BSldr" to="." method="_on_b_sldr_drag_ended"]
+[connection signal="drag_ended" from="FotoOptions/rgbVbox/RSldr" to="." method="_on_r_sldr_drag_ended"]
+[connection signal="drag_ended" from="FotoOptions/rgbVbox/GSldr" to="." method="_on_g_sldr_drag_ended"]
+[connection signal="drag_ended" from="FotoOptions/rgbVbox/USldr" to="." method="_on_u_sldr_drag_ended"]
+[connection signal="pressed" from="FotoOptions/CycleBtns/PrevFotoBtn" to="." method="_on_prev_foto_btn_pressed"]
+[connection signal="pressed" from="FotoOptions/CycleBtns/NextFotoBtn" to="." method="_on_next_foto_btn_pressed"]
+[connection signal="drag_ended" from="FotoOptions/AlphaBlendVBox/ABSldr" to="." method="_on_ab_sldr_drag_ended"]

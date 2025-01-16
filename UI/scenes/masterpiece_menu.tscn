@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4jhjng7hgwnj"]
+
+[ext_resource type="Script" path="res://UI/scripts/masterpiece_menu.gd" id="1_3tjc2"]
+[ext_resource type="Theme" uid="uid://db6vkjutpe4xq" path="res://UI/assets/resources/masterpiece_menu_theme.tres" id="1_6tr56"]
+[ext_resource type="PackedScene" uid="uid://densihchpunbv" path="res://UI/scenes/artribute_color_hbox.tscn" id="2_yyn1y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7g4gw"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.79804, 0.849468, 7.70092e-07, 1)
+border_blend = true
+
+[node name="MasterpieceMenu" type="MarginContainer"]
+offset_right = 313.0
+offset_bottom = 158.0
+theme = ExtResource("1_6tr56")
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_3tjc2")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7g4gw")
+
+[node name="MasterpieceVbox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+
+[node name="SelectionHbox" type="HBoxContainer" parent="Panel/MasterpieceVbox"]
+layout_mode = 2
+
+[node name="NewMasterpieceBtn" type="Button" parent="Panel/MasterpieceVbox/SelectionHbox"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Random
+Masterpiece"
+
+[node name="MasterpieceDropdown" type="OptionButton" parent="Panel/MasterpieceVbox/SelectionHbox"]
+layout_mode = 2
+size_flags_vertical = 4
+selected = 0
+allow_reselect = true
+item_count = 1
+popup/item_0/text = "3210456987"
+
+[node name="ArtributeColorHbox" parent="Panel/MasterpieceVbox" instance=ExtResource("2_yyn1y")]
+layout_mode = 2
+
+[node name="GaymsDropdown" type="OptionButton" parent="Panel/MasterpieceVbox"]
+visible = false
+layout_mode = 2
+disabled = true
+
+[node name="GaymButtons" type="HBoxContainer" parent="Panel/MasterpieceVbox"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="NewGaym" type="Button" parent="Panel/MasterpieceVbox/GaymButtons"]
+layout_mode = 2
+size_flags_horizontal = 6
+disabled = true
+text = "New Gaym"
+
+[node name="ResetGaym" type="Button" parent="Panel/MasterpieceVbox/GaymButtons"]
+layout_mode = 2
+size_flags_horizontal = 6
+disabled = true
+text = "Reset Gaym"
+
+[node name="TimeLabelHBoxContainer" type="HBoxContainer" parent="Panel/MasterpieceVbox"]
+layout_mode = 2
+
+[node name="TickLabel" type="Label" parent="Panel/MasterpieceVbox/TimeLabelHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Tick: 2"
+
+[node name="TiockLabel" type="Label" parent="Panel/MasterpieceVbox/TimeLabelHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Tiock: 2.2"
+
+[node name="TockLabel" type="Label" parent="Panel/MasterpieceVbox/TimeLabelHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Tock: 0.2"
+
+[node name="TimeHboxContainer" type="HBoxContainer" parent="Panel/MasterpieceVbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TickSpeedSlider" type="HSlider" parent="Panel/MasterpieceVbox/TimeHboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="TockSpeedSlider" type="HSlider" parent="Panel/MasterpieceVbox/TimeHboxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.1
+max_value = 0.9
+step = 0.01
+value = 0.1
+
+[connection signal="pressed" from="Panel/MasterpieceVbox/SelectionHbox/NewMasterpieceBtn" to="." method="_on_new_masterpiece_btn_pressed"]
+[connection signal="item_selected" from="Panel/MasterpieceVbox/SelectionHbox/MasterpieceDropdown" to="." method="_on_masterpiece_dropdown_item_selected"]
+[connection signal="drag_ended" from="Panel/MasterpieceVbox/TimeHboxContainer/TickSpeedSlider" to="." method="_on_tick_speed_slider_drag_ended"]
+[connection signal="drag_ended" from="Panel/MasterpieceVbox/TimeHboxContainer/TockSpeedSlider" to="." method="_on_tock_speed_slider_drag_ended"]

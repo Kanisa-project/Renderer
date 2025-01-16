@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://bseep5gelqji4"]
+
+[ext_resource type="Script" path="res://UI/scripts/artyle_menu.gd" id="1_67e5f"]
+[ext_resource type="Theme" uid="uid://du6cvgu3wovow" path="res://UI/assets/resources/artyle_menu_theme.tres" id="1_u6urs"]
+[ext_resource type="PackedScene" uid="uid://ckxns8bjjboav" path="res://UI/scenes/tab_bar_glyth.tscn" id="2_5jma4"]
+[ext_resource type="PackedScene" uid="uid://by2bd0x3p4bmp" path="res://UI/scenes/tab_bar_glyph.tscn" id="3_h81e1"]
+[ext_resource type="PackedScene" uid="uid://tedctedkonvp" path="res://UI/scenes/tab_bar_wordie.tscn" id="4_mqbcj"]
+[ext_resource type="PackedScene" uid="uid://c1wy8sfj8txsy" path="res://UI/scenes/tab_bar_recipe.tscn" id="5_jggtf"]
+[ext_resource type="PackedScene" uid="uid://cg3t6fm1r4sri" path="res://UI/scenes/tab_bar_foto.tscn" id="6_3wxip"]
+[ext_resource type="PackedScene" uid="uid://d3idb3unkeryn" path="res://UI/scenes/tab_bar_spirite.tscn" id="7_7kva6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsadn"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.252028, 0.252028, 0.252027, 1)
+border_blend = true
+
+[node name="ArtyleMenu" type="MarginContainer"]
+offset_right = 416.0
+offset_bottom = 141.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_u6urs")
+script = ExtResource("1_67e5f")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsadn")
+
+[node name="ArtyleTabs" type="TabContainer" parent="Panel"]
+layout_mode = 2
+current_tab = 0
+tabs_position = 1
+
+[node name="Glyth" parent="Panel/ArtyleTabs" instance=ExtResource("2_5jma4")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Glyph" parent="Panel/ArtyleTabs" instance=ExtResource("3_h81e1")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Wordie" parent="Panel/ArtyleTabs" instance=ExtResource("4_mqbcj")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Recipe" parent="Panel/ArtyleTabs" instance=ExtResource("5_jggtf")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Foto" parent="Panel/ArtyleTabs" instance=ExtResource("6_3wxip")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="Spirite" parent="Panel/ArtyleTabs" instance=ExtResource("7_7kva6")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[connection signal="tab_selected" from="Panel/ArtyleTabs" to="." method="_on_artyle_tabs_tab_selected"]

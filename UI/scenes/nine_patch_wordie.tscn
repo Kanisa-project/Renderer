@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1bajth0x5ftw"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_xu30n"]
+[ext_resource type="Texture2D" uid="uid://dkv2xs0i10c5e" path="res://shader_tut/checkered.png" id="2_e54ut"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_wordie.gd" id="2_moqe1"]
+[ext_resource type="PackedScene" uid="uid://cgcd4n22y5da1" path="res://PetMethods/PetOwners/owner_susan.tscn" id="4_3l340"]
+[ext_resource type="PackedScene" uid="uid://dlx6qfoailpys" path="res://PetMethods/PetOwners/owner_justin.tscn" id="5_122tm"]
+[ext_resource type="PackedScene" uid="uid://b21jbisamif5f" path="res://PetMethods/PetOwners/owner_jacob.tscn" id="6_4pvct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nwm2"]
+atlas = ExtResource("2_e54ut")
+region = Rect2(32, 16, 16, 16)
+
+[node name="NinePatchWordie" instance=ExtResource("1_xu30n")]
+texture = SubResource("AtlasTexture_5nwm2")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+script = ExtResource("2_moqe1")
+
+[node name="tickTimer" parent="." index="0"]
+wait_time = 4.2
+
+[node name="WordSearchGrid" type="GridContainer" parent="." index="2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchPanel" type="Panel" parent="WordSearchGrid" index="0"]
+custom_minimum_size = Vector2(741, 420)
+layout_mode = 2
+
+[node name="OwnerSusan" parent="." index="3" instance=ExtResource("4_3l340")]
+
+[node name="OwnerJustin" parent="." index="4" instance=ExtResource("5_122tm")]
+
+[node name="OwnerJacob" parent="." index="5" instance=ExtResource("6_4pvct")]
+
+[node name="RSG_slots" type="VBoxContainer" parent="." index="6"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 29.0
+offset_right = 705.0
+offset_bottom = 391.0
+
+[node name="SlotOne" type="RichTextLabel" parent="RSG_slots" index="0"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SlotTwo" type="RichTextLabel" parent="RSG_slots" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SlotThree" type="RichTextLabel" parent="RSG_slots" index="2"]
+layout_mode = 2
+size_flags_vertical = 3

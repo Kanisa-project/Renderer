@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk676npdsr4sb"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_tioy7"]
+[ext_resource type="Texture2D" uid="uid://dmpcr1nicwxda" path="res://shader_tut/striped.png" id="2_8jw45"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_foto.gd" id="2_jwfj8"]
+[ext_resource type="Shader" path="res://shader_tut/texture_code7.gdshader" id="2_r8pw0"]
+[ext_resource type="PackedScene" uid="uid://ikmbittdy6nr" path="res://PetMethods/PetOwners/owner_bethany.tscn" id="4_3qaak"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_50318"]
+shader = ExtResource("2_r8pw0")
+shader_parameter/h = 1.0
+shader_parameter/s = 1.0
+shader_parameter/b = 1.0
+shader_parameter/r = 1.0
+shader_parameter/g = 1.0
+shader_parameter/u = 1.0
+
+[node name="NinePatchFoto" instance=ExtResource("1_tioy7")]
+material = SubResource("ShaderMaterial_50318")
+texture = ExtResource("2_8jw45")
+axis_stretch_horizontal = 0
+axis_stretch_vertical = 0
+script = ExtResource("2_jwfj8")
+
+[node name="tickTimer" parent="." index="0"]
+wait_time = 2.2
+
+[node name="tockTimer" parent="." index="1"]
+wait_time = 2.2
+
+[node name="OwnerBethany" parent="." index="2" instance=ExtResource("4_3qaak")]
+
+[node name="tiockTimer" type="Timer" parent="." index="3"]
+autostart = true
+
+[connection signal="timeout" from="tiockTimer" to="." method="_on_tiock_timer_timeout"]

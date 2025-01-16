@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxvo7k7s8hmlq"]
+
+[ext_resource type="PackedScene" uid="uid://d4jhjng7hgwnj" path="res://UI/scenes/masterpiece_menu.tscn" id="1_kadjw"]
+[ext_resource type="Script" path="res://UI/scripts/screen_one.gd" id="1_t1jcn"]
+[ext_resource type="PackedScene" uid="uid://bseep5gelqji4" path="res://UI/scenes/artyle_menu.tscn" id="2_si38l"]
+[ext_resource type="PackedScene" uid="uid://c88x6a58lpjlg" path="res://UI/scenes/kinvow.tscn" id="4_4fb5b"]
+
+[node name="ScreenOne" type="Node2D"]
+script = ExtResource("1_t1jcn")
+
+[node name="MasterpieceMenu" parent="." instance=ExtResource("1_kadjw")]
+offset_bottom = 154.0
+
+[node name="ArtyleMenu" parent="." instance=ExtResource("2_si38l")]
+offset_top = 419.0
+offset_right = 1152.0
+offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Kinvow" parent="." instance=ExtResource("4_4fb5b")]
+position = Vector2(383, 0)

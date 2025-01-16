@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=3 uid="uid://c88x6a58lpjlg"]
+
+[ext_resource type="Script" path="res://UI/scripts/kinvow.gd" id="1_k4vb8"]
+[ext_resource type="PackedScene" uid="uid://dk676npdsr4sb" path="res://UI/scenes/nine_patch_foto.tscn" id="2_1tq00"]
+[ext_resource type="PackedScene" uid="uid://dsupr8k41xubw" path="res://UI/scenes/nine_patch_glyph.tscn" id="3_r6snb"]
+[ext_resource type="PackedScene" uid="uid://cvpw5rqwgqkit" path="res://UI/scenes/nine_patch_glyth.tscn" id="4_lt7as"]
+[ext_resource type="PackedScene" uid="uid://bg463auy5l7j0" path="res://UI/scenes/nine_patch_recipe.tscn" id="5_vxktu"]
+[ext_resource type="PackedScene" uid="uid://c1bajth0x5ftw" path="res://UI/scenes/nine_patch_wordie.tscn" id="6_ffm2a"]
+[ext_resource type="PackedScene" uid="uid://s4hjom00kapj" path="res://UI/scenes/nine_patch_spirite.tscn" id="7_qe2km"]
+
+[node name="Kinvow" type="Node2D"]
+script = ExtResource("1_k4vb8")
+
+[node name="NinePatchFoto" parent="." instance=ExtResource("2_1tq00")]
+visible = false
+
+[node name="NinePatchGlyph" parent="." instance=ExtResource("3_r6snb")]
+visible = false
+
+[node name="NinePatchGlyth" parent="." instance=ExtResource("4_lt7as")]
+
+[node name="NinePatchRecipe" parent="." instance=ExtResource("5_vxktu")]
+visible = false
+offset_right = 741.0
+offset_bottom = 420.0
+
+[node name="NinePatchWordie" parent="." instance=ExtResource("6_ffm2a")]
+visible = false
+
+[node name="NinePatchSpirite" parent="." instance=ExtResource("7_qe2km")]
+visible = false

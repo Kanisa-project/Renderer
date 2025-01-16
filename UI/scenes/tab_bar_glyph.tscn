@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://by2bd0x3p4bmp"]
+
+[ext_resource type="PackedScene" uid="uid://s7adfu06v7f" path="res://UI/scenes/tab_bar_artyle.tscn" id="1_eojnr"]
+[ext_resource type="Script" path="res://UI/scripts/tab_bar_glyph.gd" id="2_u754q"]
+
+[node name="Glyph" instance=ExtResource("1_eojnr")]
+script = ExtResource("2_u754q")

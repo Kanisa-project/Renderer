@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpop1ny26w81n"]
+
+[ext_resource type="Script" path="res://UI/scripts/character_button.gd" id="1_k5fh6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ae1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.791517, 0.851791, 0, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_1yudl"]
+Button/styles/normal = SubResource("StyleBoxFlat_d1ae1")
+
+[node name="CharacterButton" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+theme = SubResource("Theme_1yudl")
+text = "F"
+script = ExtResource("1_k5fh6")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

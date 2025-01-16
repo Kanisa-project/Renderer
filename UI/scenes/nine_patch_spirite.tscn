@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://s4hjom00kapj"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_jsdqa"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_spirite.gd" id="2_xbk0k"]
+[ext_resource type="Texture2D" uid="uid://4k1jqag13eut" path="res://Spirites/Alien/body4.png" id="3_8jr3b"]
+[ext_resource type="Texture2D" uid="uid://kunux07lo5my" path="res://Spirites/Alien/eyes0.png" id="4_p2ntr"]
+[ext_resource type="Texture2D" uid="uid://b6844ihyoois0" path="res://Spirites/Alien/mouth5.png" id="5_t5l1f"]
+[ext_resource type="Texture2D" uid="uid://bt2qw5ce1by0n" path="res://Spirites/Alien/tentacles9.png" id="6_6n60n"]
+
+[node name="NinePatchSpirite" instance=ExtResource("1_jsdqa")]
+script = ExtResource("2_xbk0k")
+
+[node name="tickTimer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="Spirite" type="Sprite2D" parent="." index="2"]
+position = Vector2(355, 180)
+
+[node name="layerOne" type="TextureRect" parent="Spirite" index="0"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("3_8jr3b")
+
+[node name="layerTwo" type="TextureRect" parent="Spirite" index="1"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("4_p2ntr")
+
+[node name="layerThree" type="TextureRect" parent="Spirite" index="2"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("5_t5l1f")
+
+[node name="layerFour" type="TextureRect" parent="Spirite" index="3"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("6_6n60n")

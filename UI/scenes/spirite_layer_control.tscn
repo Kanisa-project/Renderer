@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://r2lk6gm1rlrx"]
+
+[ext_resource type="Script" path="res://UI/scripts/spirite_layer_control.gd" id="1_m3ja8"]
+[ext_resource type="Texture2D" uid="uid://cwprkmm4f2xgd" path="res://Spirites/Asteroid/shell0.png" id="2_mw7su"]
+[ext_resource type="PackedScene" uid="uid://densihchpunbv" path="res://UI/scenes/artribute_color_hbox.tscn" id="2_yccie"]
+
+[node name="spiriteLayerControl" type="PanelContainer"]
+script = ExtResource("1_m3ja8")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="layerName" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Asertoid/shell0.png"
+horizontal_alignment = 1
+
+[node name="layerTexture" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("2_mw7su")
+stretch_mode = 3
+
+[node name="cyclingHBox" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="prevBtn" type="Button" parent="VBox/cyclingHBox"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "<<<"
+
+[node name="randBtn" type="Button" parent="VBox/cyclingHBox"]
+layout_mode = 2
+text = "rand"
+
+[node name="nextBtn" type="Button" parent="VBox/cyclingHBox"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = ">>>"
+
+[node name="ArtributeColorHbox" parent="VBox" instance=ExtResource("2_yccie")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBox/cyclingHBox/prevBtn" to="." method="_on_prev_btn_pressed"]
+[connection signal="pressed" from="VBox/cyclingHBox/randBtn" to="." method="_on_rand_btn_pressed"]
+[connection signal="pressed" from="VBox/cyclingHBox/nextBtn" to="." method="_on_next_btn_pressed"]
+[connection signal="artribute_changed" from="VBox/ArtributeColorHbox" to="." method="_on_artribute_color_hbox_artribute_changed"]
+[connection signal="color_changed" from="VBox/ArtributeColorHbox" to="." method="_on_artribute_color_hbox_color_changed"]

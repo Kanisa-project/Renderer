@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1wy8sfj8txsy"]
+
+[ext_resource type="PackedScene" uid="uid://s7adfu06v7f" path="res://UI/scenes/tab_bar_artyle.tscn" id="1_md03h"]
+[ext_resource type="Script" path="res://UI/scripts/tab_bar_recipe.gd" id="2_pmr7i"]
+
+[node name="Recipe" instance=ExtResource("1_md03h")]
+script = ExtResource("2_pmr7i")
+
+[node name="OptionsGrid" parent="." index="0"]
+columns = 6
+
+[node name="RecipeOptions" type="VBoxContainer" parent="." index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="recipeName" type="Label" parent="RecipeOptions" index="0"]
+layout_mode = 2
+text = "Lamb Marinade"
+horizontal_alignment = 1
+
+[node name="recipeAuthor" type="Label" parent="RecipeOptions" index="1"]
+layout_mode = 2
+text = "Junior"
+horizontal_alignment = 1
+
+[node name="recipeCycleHbox" type="HBoxContainer" parent="RecipeOptions" index="2"]
+layout_mode = 2
+alignment = 1
+
+[node name="prevBtn" type="Button" parent="RecipeOptions/recipeCycleHbox" index="0"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "<<"
+
+[node name="randBtn" type="Button" parent="RecipeOptions/recipeCycleHbox" index="1"]
+visible = false
+layout_mode = 2
+text = "rand"
+
+[node name="nextBtn" type="Button" parent="RecipeOptions/recipeCycleHbox" index="2"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = ">>"
+
+[connection signal="pressed" from="RecipeOptions/recipeCycleHbox/prevBtn" to="." method="_on_prev_btn_pressed"]
+[connection signal="pressed" from="RecipeOptions/recipeCycleHbox/randBtn" to="." method="_on_rand_btn_pressed"]
+[connection signal="pressed" from="RecipeOptions/recipeCycleHbox/nextBtn" to="." method="_on_next_btn_pressed"]

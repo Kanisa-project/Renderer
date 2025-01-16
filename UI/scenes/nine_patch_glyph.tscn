@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsupr8k41xubw"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_3xrak"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_glyph.gd" id="2_6x6pm"]
+[ext_resource type="PackedScene" uid="uid://cgcd4n22y5da1" path="res://PetMethods/PetOwners/owner_susan.tscn" id="3_rexw4"]
+[ext_resource type="PackedScene" uid="uid://b21jbisamif5f" path="res://PetMethods/PetOwners/owner_jacob.tscn" id="4_a7b0p"]
+[ext_resource type="PackedScene" uid="uid://b74brt7e2ljgq" path="res://PetMethods/PetOwners/owner_robert.tscn" id="5_4n7ty"]
+
+[node name="NinePatchGlyph" instance=ExtResource("1_3xrak")]
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_6x6pm")
+
+[node name="tickTimer" parent="." index="0"]
+wait_time = 0.5
+
+[node name="OwnerJacob" parent="." index="2" instance=ExtResource("4_a7b0p")]
+
+[node name="OwnerSusan" parent="." index="3" instance=ExtResource("3_rexw4")]
+
+[node name="OwnerRobert" parent="." index="4" instance=ExtResource("5_4n7ty")]

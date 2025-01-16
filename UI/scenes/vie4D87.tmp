@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5bbyxl8m1k5w"]
+
+[ext_resource type="Script" path="res://UI/scripts/viewing_portion.gd" id="1_va1he"]
+[ext_resource type="PackedScene" uid="uid://mhjs7qwhmmky" path="res://UI/scenes/glyth_color_rect.tscn" id="2_8bsqk"]
+[ext_resource type="PackedScene" uid="uid://ijb8sxr1xglf" path="res://UI/scenes/glyph_text_rect.tscn" id="3_lh4tv"]
+[ext_resource type="Texture2D" uid="uid://dkv2xs0i10c5e" path="res://shader_tut/checkered.png" id="3_yb87m"]
+[ext_resource type="PackedScene" uid="uid://bbwf8rwa0a0hb" path="res://UI/scenes/wordie_nine_patch.tscn" id="4_k5ryg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1on8l"]
+atlas = ExtResource("3_yb87m")
+region = Rect2(16, 0, 48, 48)
+
+[node name="ViewingPortion" type="Node2D"]
+script = ExtResource("1_va1he")
+
+[node name="WordieNinePatch" parent="." instance=ExtResource("4_k5ryg")]
+visible = false
+custom_minimum_size = Vector2(750, 420)
+anchor_right = 0.362
+anchor_bottom = 0.008
+offset_left = 401.0
+offset_top = 3.0
+offset_right = 1151.0
+offset_bottom = 423.0
+texture = SubResource("AtlasTexture_1on8l")
+region_rect = Rect2(8, 8, 32, 32)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="GlythColorRect" parent="." instance=ExtResource("2_8bsqk")]
+visible = false
+
+[node name="GlyphTextRect" parent="." instance=ExtResource("3_lh4tv")]
+visible = false
+
+[node name="redraw_same_btn" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 238.0
+offset_right = 127.0
+offset_bottom = 292.0
+text = "Redraw
+Same Settings"
+
+[node name="redraw_new_btn" type="Button" parent="."]
+offset_left = 155.0
+offset_top = 239.0
+offset_right = 272.0
+offset_bottom = 293.0
+text = "Redraw
+New Settings"
+
+[connection signal="pressed" from="redraw_same_btn" to="." method="_on_redraw_same_btn_pressed"]
+[connection signal="pressed" from="redraw_new_btn" to="." method="_on_redraw_new_btn_pressed"]

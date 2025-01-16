@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://du6cvgu3wovow"]
+
+[ext_resource type="FontFile" uid="uid://c73qi1niodruq" path="res://UI/assets/fonts/Akt-Medium.ttf" id="1_lt5pw"]
+
+[resource]
+default_font = ExtResource("1_lt5pw")

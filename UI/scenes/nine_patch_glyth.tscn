@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvpw5rqwgqkit"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_xa7ml"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_glyth.gd" id="2_hlhe7"]
+[ext_resource type="PackedScene" uid="uid://cgcd4n22y5da1" path="res://PetMethods/PetOwners/owner_susan.tscn" id="4_oci6e"]
+[ext_resource type="PackedScene" uid="uid://dlx6qfoailpys" path="res://PetMethods/PetOwners/owner_justin.tscn" id="5_1r8l5"]
+[ext_resource type="PackedScene" uid="uid://ikmbittdy6nr" path="res://PetMethods/PetOwners/owner_bethany.tscn" id="6_7gpih"]
+[ext_resource type="PackedScene" uid="uid://b21jbisamif5f" path="res://PetMethods/PetOwners/owner_jacob.tscn" id="6_w8cxr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4qbet"]
+load_path = "res://.godot/imported/striped_h.png-c8682777afd3866d8c3878914d91135e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpykq"]
+atlas = SubResource("CompressedTexture2D_4qbet")
+region = Rect2(0, 0, 128, 128)
+
+[node name="NinePatchGlyth" instance=ExtResource("1_xa7ml")]
+anchors_preset = -1
+anchor_right = 0.643
+anchor_bottom = 0.648
+offset_right = 0.263977
+offset_bottom = 0.0960083
+texture = SubResource("AtlasTexture_fpykq")
+script = ExtResource("2_hlhe7")
+
+[node name="OwnerJacob" parent="." index="2" instance=ExtResource("6_w8cxr")]
+
+[node name="OwnerSusan" parent="." index="3" instance=ExtResource("4_oci6e")]
+
+[node name="OwnerJustin" parent="." index="4" instance=ExtResource("5_1r8l5")]
+
+[node name="OwnerBethany" parent="." index="5" instance=ExtResource("6_7gpih")]

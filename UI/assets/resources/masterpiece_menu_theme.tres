@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://db6vkjutpe4xq"]
+
+[ext_resource type="FontFile" uid="uid://d125ohjh10mic" path="res://UI/assets/fonts/Parkinsans-Medium.ttf" id="1_nvs2i"]
+
+[resource]
+default_font = ExtResource("1_nvs2i")

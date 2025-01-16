@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbwf8rwa0a0hb"]
+
+[ext_resource type="Script" path="res://UI/scripts/wordie_nine_patch.gd" id="1_7286m"]
+[ext_resource type="Texture2D" uid="uid://dkv2xs0i10c5e" path="res://shader_tut/checkered.png" id="1_my0k4"]
+[ext_resource type="PackedScene" uid="uid://5wqs210rd43" path="res://PetMethods/PetOwners/owner_trevor.tscn" id="2_6de8o"]
+[ext_resource type="PackedScene" uid="uid://qk1fm71utxsv" path="res://PetMethods/Dogs/blue_method.tscn" id="3_igl07"]
+[ext_resource type="PackedScene" uid="uid://bmvtnmhicibbu" path="res://PetMethods/Dogs/mila_method.tscn" id="4_0jg8f"]
+[ext_resource type="PackedScene" uid="uid://dat0hfgxhhjw1" path="res://PetMethods/Cats/kora_method.tscn" id="5_ddont"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e30bd"]
+atlas = ExtResource("1_my0k4")
+region = Rect2(0, 0, 128, 128)
+
+[node name="WordieNinePatch" type="NinePatchRect"]
+anchors_preset = -1
+anchor_left = 0.362
+anchor_top = 0.008
+anchor_right = 0.992
+anchor_bottom = 0.642
+offset_left = -0.0240173
+offset_top = -0.184
+offset_right = 0.215942
+offset_bottom = -0.0160217
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_e30bd")
+axis_stretch_vertical = 2
+script = ExtResource("1_7286m")
+
+[node name="TikTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="OwnerTrevor" parent="." instance=ExtResource("2_6de8o")]
+
+[node name="BlueMethod" parent="OwnerTrevor" instance=ExtResource("3_igl07")]
+
+[node name="MilaMethod" parent="OwnerTrevor" instance=ExtResource("4_0jg8f")]
+
+[node name="KoraMethod" parent="OwnerTrevor" instance=ExtResource("5_ddont")]
+
+[connection signal="timeout" from="TikTimer" to="." method="_on_tik_timer_timeout"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg463auy5l7j0"]
+
+[ext_resource type="PackedScene" uid="uid://m7fwokwofh3j" path="res://UI/scenes/nine_patch_artyle.tscn" id="1_yp522"]
+[ext_resource type="Texture2D" uid="uid://dkv2xs0i10c5e" path="res://shader_tut/checkered.png" id="2_8kmeg"]
+[ext_resource type="Script" path="res://UI/scripts/nine_patch_recipe.gd" id="2_ici7a"]
+[ext_resource type="PackedScene" uid="uid://ikmbittdy6nr" path="res://PetMethods/PetOwners/owner_bethany.tscn" id="3_xatp0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnqbr"]
+atlas = ExtResource("2_8kmeg")
+region = Rect2(16, 0, 48, 48)
+
+[node name="NinePatchRecipe" instance=ExtResource("1_yp522")]
+offset_right = 780.0
+offset_bottom = 437.0
+texture = SubResource("AtlasTexture_jnqbr")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+script = ExtResource("2_ici7a")
+
+[node name="IngredInfoHbox" type="HBoxContainer" parent="." index="2"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 30.0
+offset_right = 569.0
+offset_bottom = 205.0
+
+[node name="IngredientsRichText" type="RichTextLabel" parent="IngredInfoHbox" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+
+[node name="InformationRichText" type="RichTextLabel" parent="IngredInfoHbox" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+bbcode_enabled = true
+fit_content = true
+
+[node name="DirectionsRichText" type="RichTextLabel" parent="." index="3"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 166.0
+offset_right = 757.0
+offset_bottom = 411.0
+bbcode_enabled = true
+fit_content = true
+
+[node name="OwnerBethany" parent="." index="4" instance=ExtResource("3_xatp0")]
+position = Vector2(-360, 250)

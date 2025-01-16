@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://densihchpunbv"]
+
+[ext_resource type="Script" path="res://UI/scripts/artribute_color_hbox.gd" id="1_b6jl4"]
+
+[node name="ArtributeColorHbox" type="HBoxContainer"]
+offset_right = 181.0
+offset_bottom = 66.0
+script = ExtResource("1_b6jl4")
+
+[node name="ArtributeGrid" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 3
+
+[node name="AccuracyBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🖍️"
+
+[node name="TransparencyBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🚪"
+
+[node name="ColorationBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🌈"
+
+[node name="AnimSpeedBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🔥"
+
+[node name="SizeBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🐶"
+
+[node name="AnimAmountBtn" type="Button" parent="ArtributeGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "🧦"
+
+[node name="ColorPaletteGrid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="Button" type="Button" parent="ColorPaletteGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button2" type="Button" parent="ColorPaletteGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button3" type="Button" parent="ColorPaletteGrid"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button4" type="Button" parent="ColorPaletteGrid"]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button5" type="Button" parent="ColorPaletteGrid"]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button6" type="Button" parent="ColorPaletteGrid"]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button7" type="Button" parent="ColorPaletteGrid"]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[node name="Button8" type="Button" parent="ColorPaletteGrid"]
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "F"
+
+[connection signal="pressed" from="ArtributeGrid/AccuracyBtn" to="." method="_on_accuracy_btn_pressed"]
+[connection signal="pressed" from="ArtributeGrid/TransparencyBtn" to="." method="_on_transparency_btn_pressed"]
+[connection signal="pressed" from="ArtributeGrid/ColorationBtn" to="." method="_on_coloration_btn_pressed"]
+[connection signal="pressed" from="ArtributeGrid/AnimSpeedBtn" to="." method="_on_anim_speed_btn_pressed"]
+[connection signal="pressed" from="ArtributeGrid/SizeBtn" to="." method="_on_size_btn_pressed"]
+[connection signal="pressed" from="ArtributeGrid/AnimAmountBtn" to="." method="_on_anim_amount_btn_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3idb3unkeryn"]
+
+[ext_resource type="PackedScene" uid="uid://s7adfu06v7f" path="res://UI/scenes/tab_bar_artyle.tscn" id="1_sef4j"]
+[ext_resource type="Script" path="res://UI/scripts/tab_bar_spirite.gd" id="2_rlxnm"]
+[ext_resource type="PackedScene" uid="uid://r2lk6gm1rlrx" path="res://UI/scenes/spirite_layer_control.tscn" id="3_80ouk"]
+
+[node name="TabBarSpirite" instance=ExtResource("1_sef4j")]
+script = ExtResource("2_rlxnm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+
+[node name="spiriteLayerControl1" parent="HBoxContainer" index="0" instance=ExtResource("3_80ouk")]
+layout_mode = 2
+
+[node name="spiriteLayerControl2" parent="HBoxContainer" index="1" instance=ExtResource("3_80ouk")]
+layout_mode = 2
+
+[node name="spiriteLayerControl3" parent="HBoxContainer" index="2" instance=ExtResource("3_80ouk")]
+layout_mode = 2
+
+[node name="spiriteLayerControl4" parent="HBoxContainer" index="3" instance=ExtResource("3_80ouk")]
+layout_mode = 2

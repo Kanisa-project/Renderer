@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bgqk6tr1wxbbk"]
+
+[ext_resource type="FontFile" uid="uid://d125ohjh10mic" path="res://UI/assets/fonts/Parkinsans-Medium.ttf" id="1_tm7bm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ae1"]
+bg_color = Color(0.309804, 0.301961, 0.576471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.791517, 0.851791, 0, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 20
+
+[resource]
+default_font = ExtResource("1_tm7bm")
+Button/styles/normal = SubResource("StyleBoxFlat_d1ae1")

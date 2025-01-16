@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckxns8bjjboav"]
+
+[ext_resource type="PackedScene" uid="uid://s7adfu06v7f" path="res://UI/scenes/tab_bar_artyle.tscn" id="1_j0d0r"]
+[ext_resource type="Script" path="res://UI/scripts/tab_bar_glyth.gd" id="2_onu7w"]
+
+[node name="GlythTabBar" instance=ExtResource("1_j0d0r")]
+script = ExtResource("2_onu7w")
